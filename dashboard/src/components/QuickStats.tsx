@@ -13,43 +13,43 @@ export default function QuickStats() {
     switch (status) {
       case "Completed":
         return {
-          color: "bg-emerald-50 text-emerald-700 border-emerald-200",
+          color: "bg-[var(--color-accent-muted)] text-[var(--color-primary)] border-[var(--color-primary)]/20",
           icon: Check,
         };
       case "Processing":
         return {
-          color: "bg-blue-50 text-blue-700 border-blue-200",
+          color: "bg-[var(--color-secondary-light)] text-[var(--color-text-secondary)] border-[var(--color-border)]",
           icon: Loader,
         };
       case "Pending":
         return {
-          color: "bg-amber-50 text-amber-700 border-amber-200",
+          color: "bg-[var(--color-secondary-light)] text-[var(--color-text-muted)] border-[var(--color-border)]",
           icon: Clock,
         };
       default:
         return {
-          color: "bg-gray-50 text-gray-700 border-gray-200",
+          color: "bg-[var(--color-secondary-light)] text-[var(--color-text-muted)] border-[var(--color-border)]",
           icon: Clock,
         };
     }
   };
 
   return (
-    <div className="bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-2xl shadow-card animate-slide-in overflow-hidden">
+    <div className="bg-white border border-[var(--color-border)] rounded-xl overflow-hidden">
       {/* Header */}
-      <div className="p-8 lg:p-10 border-b border-[var(--color-border)] bg-gradient-to-r from-[var(--color-bg-light)] to-transparent">
+      <div className="p-6 border-b border-[var(--color-border)]">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-2">
+            <h2 className="text-lg font-bold text-[var(--color-text-primary)] mb-1">
               Recent Orders
             </h2>
-            <p className="text-base text-[var(--color-text-muted)]">
+            <p className="text-sm text-[var(--color-text-muted)]">
               Latest transactions from your store
             </p>
           </div>
-          <button className="flex items-center gap-2 px-5 py-3 text-sm text-[var(--color-primary)] hover:bg-[var(--color-bg-light)] font-semibold rounded-xl transition-all duration-200 hover:scale-105">
+          <button className="flex items-center gap-1.5 px-3 py-2 text-xs text-[var(--color-primary)] hover:bg-[var(--color-accent-muted)] font-semibold rounded-lg transition-all duration-200">
             View All
-            <ArrowUpRight className="w-4 h-4" />
+            <ArrowUpRight className="w-3.5 h-3.5" />
           </button>
         </div>
       </div>
@@ -59,16 +59,16 @@ export default function QuickStats() {
         <table className="w-full">
           <thead>
             <tr className="border-b border-[var(--color-border)] bg-[var(--color-bg-light)]">
-              <th className="text-left px-8 lg:px-10 py-5 text-xs font-bold text-[var(--color-text-secondary)] uppercase tracking-wider">
+              <th className="text-left px-6 py-3 text-xs font-semibold text-[var(--color-text-secondary)]">
                 Order ID
               </th>
-              <th className="text-left px-8 lg:px-10 py-5 text-xs font-bold text-[var(--color-text-secondary)] uppercase tracking-wider">
+              <th className="text-left px-6 py-3 text-xs font-semibold text-[var(--color-text-secondary)]">
                 Customer
               </th>
-              <th className="text-left px-8 lg:px-10 py-5 text-xs font-bold text-[var(--color-text-secondary)] uppercase tracking-wider">
+              <th className="text-left px-6 py-3 text-xs font-semibold text-[var(--color-text-secondary)]">
                 Amount
               </th>
-              <th className="text-left px-8 lg:px-10 py-5 text-xs font-bold text-[var(--color-text-secondary)] uppercase tracking-wider">
+              <th className="text-left px-6 py-3 text-xs font-semibold text-[var(--color-text-secondary)]">
                 Status
               </th>
             </tr>
@@ -81,22 +81,22 @@ export default function QuickStats() {
               return (
                 <tr
                   key={order.id}
-                  className="border-b border-[var(--color-border)] last:border-b-0 hover:bg-[var(--color-bg-light)] transition-all duration-200 cursor-pointer group"
+                  className="border-b border-[var(--color-border)] last:border-b-0 hover:bg-[var(--color-bg-light)] transition-all duration-200 cursor-pointer"
                 >
-                  <td className="px-8 lg:px-10 py-6 text-sm font-semibold text-[var(--color-primary)] group-hover:text-[var(--color-primary-dark)]">
+                  <td className="px-6 py-4 text-sm font-semibold text-[var(--color-primary)]">
                     {order.id}
                   </td>
-                  <td className="px-8 lg:px-10 py-6 text-sm font-medium text-[var(--color-text-primary)]">
+                  <td className="px-6 py-4 text-sm font-medium text-[var(--color-text-primary)]">
                     {order.customer}
                   </td>
-                  <td className="px-8 lg:px-10 py-6 text-sm font-bold text-[var(--color-text-primary)]">
+                  <td className="px-6 py-4 text-sm font-semibold text-[var(--color-text-primary)]">
                     {order.amount}
                   </td>
-                  <td className="px-8 lg:px-10 py-6">
+                  <td className="px-6 py-4">
                     <span
-                      className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold border ${statusConfig.color}`}
+                      className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-semibold border ${statusConfig.color}`}
                     >
-                      <StatusIcon className="w-3.5 h-3.5" />
+                      <StatusIcon className="w-3 h-3" />
                       {order.status}
                     </span>
                   </td>
