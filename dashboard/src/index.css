@@ -9,6 +9,18 @@
   --color-accent-muted: rgba(4, 232, 199, 0.06);
   --color-accent-light: rgba(4, 232, 199, 0.12);
 
+  /* Coral Rose - warm accent color for warnings, alerts, negative trends */
+  --color-coral: #ff6b6b;
+  --color-coral-light: #ff8a8a;
+  --color-coral-dark: #e85555;
+  --color-coral-muted: rgba(255, 107, 107, 0.08);
+
+  /* Deep Violet - rich accent for charts, badges, tertiary elements */
+  --color-violet: #8b5cf6;
+  --color-violet-light: #a78bfa;
+  --color-violet-dark: #7c3aed;
+  --color-violet-muted: rgba(139, 92, 246, 0.08);
+
   /* Neutral colors for minimal design */
   --color-bg-light: #fafafa;
   --color-bg-card: #ffffff;
@@ -29,6 +41,48 @@
   --shadow-xl: 0 8px 16px -4px rgba(0, 0, 0, 0.08);
 }
 
+/* Dark Theme */
+.dark {
+  /* Primary turquoise - slightly adjusted for dark mode visibility */
+  --color-primary: #04e8c7;
+  --color-primary-light: #3ffce5;
+  --color-primary-dark: #02b89e;
+  --color-accent: #04e8c7;
+  --color-accent-muted: rgba(4, 232, 199, 0.1);
+  --color-accent-light: rgba(4, 232, 199, 0.18);
+
+  /* Coral Rose - brighter for dark mode */
+  --color-coral: #ff7b7b;
+  --color-coral-light: #ff9a9a;
+  --color-coral-dark: #e85555;
+  --color-coral-muted: rgba(255, 123, 123, 0.12);
+
+  /* Deep Violet - adjusted for dark mode */
+  --color-violet: #a78bfa;
+  --color-violet-light: #c4b5fd;
+  --color-violet-dark: #8b5cf6;
+  --color-violet-muted: rgba(167, 139, 250, 0.12);
+
+  /* Dark neutral colors */
+  --color-bg-light: #0f0f0f;
+  --color-bg-card: #1a1a1a;
+  --color-border: #2a2a2a;
+  --color-secondary: #a3a3a3;
+  --color-secondary-light: #262626;
+
+  /* Text colors for dark mode */
+  --color-text-primary: #f5f5f5;
+  --color-text-secondary: #a3a3a3;
+  --color-text-light: #171717;
+  --color-text-muted: #737373;
+
+  /* Dark mode shadows - subtle glow effect */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 4px 8px -2px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 8px 16px -4px rgba(0, 0, 0, 0.6);
+}
+
 @theme inline {
   /* Primary turquoise color #04e8c7 and variations */
   --color-primary: #04e8c7;
@@ -37,6 +91,18 @@
   --color-accent: #04e8c7;
   --color-accent-muted: rgba(4, 232, 199, 0.06);
   --color-accent-light: rgba(4, 232, 199, 0.12);
+
+  /* Coral Rose - warm accent color for warnings, alerts, negative trends */
+  --color-coral: #ff6b6b;
+  --color-coral-light: #ff8a8a;
+  --color-coral-dark: #e85555;
+  --color-coral-muted: rgba(255, 107, 107, 0.08);
+
+  /* Deep Violet - rich accent for charts, badges, tertiary elements */
+  --color-violet: #8b5cf6;
+  --color-violet-light: #a78bfa;
+  --color-violet-dark: #7c3aed;
+  --color-violet-muted: rgba(139, 92, 246, 0.08);
 
   /* Neutral colors for minimal design */
   --color-bg-light: #fafafa;
@@ -152,6 +218,11 @@ body {
   border: 1px solid rgba(226, 232, 240, 0.8);
 }
 
+.dark .glass {
+  background: rgba(26, 26, 26, 0.95);
+  border: 1px solid rgba(42, 42, 42, 0.8);
+}
+
 /* Card hover effect */
 .card-hover {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -173,4 +244,408 @@ body {
 
 .shadow-card {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Subtle Gradient Utilities */
+.gradient-card {
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+}
+
+.gradient-card-hover {
+  background: linear-gradient(135deg, #ffffff 0%, #f7f7f7 100%);
+}
+
+.gradient-primary-subtle {
+  background: linear-gradient(
+    135deg,
+    rgba(4, 232, 199, 0.06) 0%,
+    rgba(4, 232, 199, 0.02) 100%
+  );
+}
+
+.gradient-violet-subtle {
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.06) 0%,
+    rgba(139, 92, 246, 0.02) 100%
+  );
+}
+
+.gradient-coral-subtle {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 107, 0.06) 0%,
+    rgba(255, 107, 107, 0.02) 100%
+  );
+}
+
+.gradient-sidebar {
+  background: linear-gradient(180deg, #ffffff 0%, #fcfcfc 50%, #f9f9f9 100%);
+}
+
+.gradient-header {
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    rgba(4, 232, 199, 0.02) 50%,
+    #ffffff 100%
+  );
+}
+
+.gradient-icon-primary {
+  background: linear-gradient(
+    135deg,
+    rgba(4, 232, 199, 0.12) 0%,
+    rgba(4, 232, 199, 0.06) 100%
+  );
+}
+
+.gradient-icon-violet {
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.12) 0%,
+    rgba(139, 92, 246, 0.06) 100%
+  );
+}
+
+.gradient-icon-coral {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 107, 0.12) 0%,
+    rgba(255, 107, 107, 0.06) 100%
+  );
+}
+
+.gradient-main-bg {
+  background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 50%, #fafafa 100%);
+}
+
+.gradient-table-header {
+  background: linear-gradient(90deg, #f8f8f8 0%, #fafafa 50%, #f8f8f8 100%);
+}
+
+.gradient-button-primary {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-dark) 100%
+  );
+}
+
+.gradient-accent-glow {
+  background: radial-gradient(
+    ellipse at top right,
+    rgba(4, 232, 199, 0.04) 0%,
+    transparent 60%
+  );
+}
+
+/* Dark mode gradient overrides */
+.dark .gradient-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #151515 100%);
+}
+
+.dark .gradient-card-hover {
+  background: linear-gradient(135deg, #1f1f1f 0%, #1a1a1a 100%);
+}
+
+.dark .gradient-primary-subtle {
+  background: linear-gradient(
+    135deg,
+    rgba(4, 232, 199, 0.1) 0%,
+    rgba(4, 232, 199, 0.04) 100%
+  );
+}
+
+.dark .gradient-violet-subtle {
+  background: linear-gradient(
+    135deg,
+    rgba(167, 139, 250, 0.1) 0%,
+    rgba(167, 139, 250, 0.04) 100%
+  );
+}
+
+.dark .gradient-coral-subtle {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 123, 123, 0.1) 0%,
+    rgba(255, 123, 123, 0.04) 100%
+  );
+}
+
+.dark .gradient-sidebar {
+  background: linear-gradient(180deg, #1a1a1a 0%, #161616 50%, #121212 100%);
+}
+
+.dark .gradient-header {
+  background: linear-gradient(
+    90deg,
+    #1a1a1a 0%,
+    rgba(4, 232, 199, 0.04) 50%,
+    #1a1a1a 100%
+  );
+}
+
+.dark .gradient-icon-primary {
+  background: linear-gradient(
+    135deg,
+    rgba(4, 232, 199, 0.18) 0%,
+    rgba(4, 232, 199, 0.1) 100%
+  );
+}
+
+.dark .gradient-icon-violet {
+  background: linear-gradient(
+    135deg,
+    rgba(167, 139, 250, 0.18) 0%,
+    rgba(167, 139, 250, 0.1) 100%
+  );
+}
+
+.dark .gradient-icon-coral {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 123, 123, 0.18) 0%,
+    rgba(255, 123, 123, 0.1) 100%
+  );
+}
+
+.dark .gradient-main-bg {
+  background: linear-gradient(180deg, #0f0f0f 0%, #0a0a0a 50%, #0f0f0f 100%);
+}
+
+.dark .gradient-table-header {
+  background: linear-gradient(90deg, #1a1a1a 0%, #1f1f1f 50%, #1a1a1a 100%);
+}
+
+.dark .gradient-accent-glow {
+  background: radial-gradient(
+    ellipse at top right,
+    rgba(4, 232, 199, 0.08) 0%,
+    transparent 60%
+  );
+}
+
+/* Notification Animations */
+@keyframes notification-progress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes notification-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes notification-slide-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.notification-enter {
+  animation: notification-slide-in 0.3s ease-out forwards;
+}
+
+.notification-exit {
+  animation: notification-slide-out 0.3s ease-in forwards;
+}
+
+/* React Grid Layout Custom Styles */
+.react-grid-layout {
+  position: relative;
+  transition: height 200ms ease;
+}
+
+.react-grid-item {
+  transition: all 200ms ease;
+  transition-property: left, top, width, height;
+  border-radius: 12px;
+  overflow: visible;
+}
+
+.react-grid-item.cssTransforms {
+  transition-property: transform, width, height;
+}
+
+.react-grid-item.resizing {
+  z-index: 1;
+  will-change: width, height;
+  opacity: 0.95;
+}
+
+.react-grid-item.react-draggable-dragging {
+  transition: none;
+  z-index: 100;
+  will-change: transform;
+  opacity: 0.9;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+}
+
+.react-grid-item.dropping {
+  visibility: hidden;
+}
+
+.react-grid-item.react-grid-placeholder {
+  background: var(--color-accent);
+  opacity: 0.15;
+  transition-duration: 100ms;
+  z-index: 2;
+  border-radius: 12px;
+  border: 2px dashed var(--color-accent);
+}
+
+/* Resize handle styling */
+.react-grid-item > .react-resizable-handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.react-grid-item:hover > .react-resizable-handle {
+  opacity: 1;
+}
+
+.react-grid-item > .react-resizable-handle::after {
+  content: "";
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
+  border-radius: 0 0 2px 0;
+}
+
+.react-grid-item > .react-resizable-handle.react-resizable-handle-se {
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+}
+
+.react-grid-item > .react-resizable-handle.react-resizable-handle-sw {
+  bottom: 0;
+  left: 0;
+  cursor: sw-resize;
+}
+
+.react-grid-item > .react-resizable-handle.react-resizable-handle-ne {
+  top: 0;
+  right: 0;
+  cursor: ne-resize;
+}
+
+.react-grid-item > .react-resizable-handle.react-resizable-handle-nw {
+  top: 0;
+  left: 0;
+  cursor: nw-resize;
+}
+
+.react-grid-item > .react-resizable-handle.react-resizable-handle-n,
+.react-grid-item > .react-resizable-handle.react-resizable-handle-s {
+  left: 50%;
+  margin-left: -10px;
+  cursor: ns-resize;
+}
+
+.react-grid-item > .react-resizable-handle.react-resizable-handle-e,
+.react-grid-item > .react-resizable-handle.react-resizable-handle-w {
+  top: 50%;
+  margin-top: -10px;
+  cursor: ew-resize;
+}
+
+/* Dark mode grid styles */
+.dark .react-grid-item.react-draggable-dragging {
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4);
+}
+
+.dark .react-grid-item.react-grid-placeholder {
+  background: var(--color-accent);
+  opacity: 0.2;
+  border: 2px dashed var(--color-accent);
+}
+
+/* Surface colors for dashboard items */
+.react-grid-item > div > div {
+  height: 100%;
+}
+
+/* Ensure child components fill the grid item */
+.react-grid-item [class*="bg-[var(--color-surface)"] {
+  height: 100%;
+}
+
+.react-grid-item [class*="gradient-card"] {
+  height: 100%;
+}
+
+/* Mobile responsive styles for grid layout */
+@media (max-width: 768px) {
+  .react-grid-layout {
+    min-height: auto !important;
+  }
+
+  .react-grid-item {
+    border-radius: 10px;
+  }
+
+  .react-grid-item.react-draggable-dragging {
+    transform: none !important;
+  }
+
+  /* Hide resize handles on mobile */
+  .react-grid-item > .react-resizable-handle {
+    display: none;
+  }
+
+  /* Ensure grid items take full allocated width */
+  .react-grid-item > div {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .react-grid-item {
+    border-radius: 8px;
+  }
+
+  /* Ensure content is readable on small screens */
+  .react-grid-layout {
+    padding: 0 !important;
+  }
+
+  /* Force full width on mobile */
+  .react-grid-item,
+  .react-grid-item > div,
+  .react-grid-item > div > div {
+    width: 100% !important;
+  }
+}
+
+/* Custom breakpoint for extra small screens */
+@media (max-width: 380px) {
+  .react-grid-item {
+    min-height: 80px;
+  }
 }
